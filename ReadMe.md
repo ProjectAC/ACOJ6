@@ -2,21 +2,37 @@
 
 #### 内部接口
 
-- __GET /submissions/last/__  
+- __GET /submissions/last/__
 
-获取最新的提交。  
+获取最新的提交。
+参数：
+```
+无
+```
 
-- __POST /submissions/Tmp/__  
+- __POST /submissions/judge/__
 
 提交刚刚评测完毕的结果。  
+参数：
+```
+{
+    token,    //经过认证获得的独一无二的token
+    result    //一个json格式的结果集合，参考ACJudge2
+}
+```
 
-- __POST /auth/acjudge/__  
+- __POST /auth/acjudge/__
 
-验证ACJudge是否值得信任，并返回token。  
+验证ACJudge是否值得信任，并返回token。
+参数：
+```
+无
+```
+
 
 #### 外部接口
 
-_ __GET /__  
+- __GET /__  
 
 获取前端页面基本框架（单页应用）。
 
